@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank WebSite</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-900">
+    <header>
+        <h1 class="text-5xl text-center mt-8 uppercase text-white">
+            Let's Get Some <span class="text-green-500">Money My Bnak</span> !!!
+        </h1>
+    </header>
+    <main>
+        <section class="mt-8">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4  text-white text-center uppercase">
+                    <div class="bg-blue-400 p-10 rounded">
+                        <h3 class="text-3xl">Deposit</h3>
+                        <h2 class="text-2xl">৳ <span id="deposit-amount">00</span></h2>
+                    </div>
+                    <div class="bg-green-400 p-10 rounded-lg">
+                        <h3 class="text-3xl">WithDraw</h3>
+                        <h2 class="text-2xl">৳ <span id="withdraw-amount">00</span></h2>
+                    </div>
+                    <div class="bg-gray-400 p-10 rounded-lg">
+                        <h3 class="text-3xl">Balance</h3>
+                        <h2 class="text-2xl">৳ <span id="balance-amount">00</span></h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-8">
+            <div class="container mx-auto ">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-8">
+                    <div class="space-y-5">
+                        <h3 class="text-3xl text-white text-center uppercase">Please Enter Deposit Amount</h3>
+                        <div class="space-y-5 bg-gray-900 p-8 rounded-md">
+                            <div>
+                                <input type="number"
+                                    class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500"
+                                    placeholder="Deposit Amount" id="user-deposit">
+                            </div>
+                            <button class="block w-full bg-yellow-400 hover:bg-yellow-300 p-4 rounded text-yellow-900
+                                hover:text-yellow-800 transition duration-300 text-white font-semibold"
+                                id="deposit-btn">
+                                Deposit Amount
+                            </button>
+                        </div>
+                    </div>
+                    <div class="space-y-5">
+                        <h3 class="text-3xl text-white text-center uppercase">Please Enter Withdraw Amount</h3>
+                        <div class="space-y-5 bg-gray-900 p-8 rounded-md">
+                            <div>
+                                <input type="number"
+                                    class="w-full border-2 border-gray-200 p-3 rounded outline-none focus:border-purple-500"
+                                    placeholder="WithDraw Amount" id="user-withdraw">
+                            </div>
+                            <button class="block w-full bg-yellow-400 hover:bg-yellow-300 p-4 rounded text-yellow-900
+                                hover:text-yellow-800 transition duration-300 text-white font-semibold"
+                                id="withdraw-btn">
+                                WithDraw Amount
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/bank.js"></script>
+</body>
+
+</html>
