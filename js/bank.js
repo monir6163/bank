@@ -58,3 +58,8 @@ document.getElementById('withdraw-btn').addEventListener('click' , function(){
         alert ('Please Enter Posstive Value');
     }
 })
+
+// logout btn even handelar
+document.getElementById('logout-btn').addEventListener('click' , function() {
+    window.location.href = 'index.html';
+})
