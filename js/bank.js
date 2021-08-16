@@ -8,7 +8,7 @@ document.getElementById('deposit-btn').addEventListener('click' , function() {
         parseFloat(depositInput.value) > 0)
     {
         // set deposit total amount 
-        const totalDeposit = totalDepositText;
+        const totalDeposit = parseFloat(totalDepositText);
         const depositAdd = document.getElementById('deposit-amount');
         const previousDepositText = depositAdd.innerText;
         const previousDeposit = parseFloat(previousDepositText);
@@ -37,7 +37,7 @@ document.getElementById('withdraw-btn').addEventListener('click' , function(){
     // basic validation
     if (!isNaN(parseFloat(withdrawInput.value)) &&
         parseFloat(withdrawInput.value) > 0) {
-        const withdrawTotal = withdrawAmountText;
+        const withdrawTotal = parseFloat(withdrawAmountText)
         // set withdraw total amount 
         const withdraw = document.getElementById('withdraw-amount');
         const withdrawText = withdraw.innerText;
