@@ -4,13 +4,11 @@ document.getElementById('deposit-btn').addEventListener('click' , function() {
     // update deposit total 
     const depositInput = document.getElementById('user-deposit');
     const totalDepositText = depositInput.value;
-    const totalDeposit = parseFloat(totalDepositText);
-    // basic validation
-    if (totalDepositText != 'number' && totalDepositText == "") {
-        alert ('Please Enter Valid Data !!');
-    }
-    else{
+    if (!isNaN(parseFloat(depositInput.value)) &&
+        parseFloat(depositInput.value) > 0)
+    {
         // set deposit total amount 
+        const totalDeposit = totalDepositText;
         const depositAdd = document.getElementById('deposit-amount');
         const previousDepositText = depositAdd.innerText;
         const previousDeposit = parseFloat(previousDepositText);
@@ -26,19 +24,20 @@ document.getElementById('deposit-btn').addEventListener('click' , function() {
 
         // clear deposit input field 
         depositInput.value = "";
+    }else{
+        alert('Please Enter Posative Value');
     }
+    
 })
 
 // add withdraw even handeler
 document.getElementById('withdraw-btn').addEventListener('click' , function(){
     const withdrawInput = document.getElementById('user-withdraw');
     const withdrawAmountText = withdrawInput.value;
-    const withdrawTotal = parseFloat(withdrawAmountText);
     // basic validation
-    if (withdrawAmountText != 'number' && withdrawAmountText == "") {
-        alert ('Please Enter Valid Data !!');
-    }
-    else{
+    if (!isNaN(parseFloat(withdrawInput.value)) &&
+        parseFloat(withdrawInput.value) > 0) {
+        const withdrawTotal = withdrawAmountText;
         // set withdraw total amount 
         const withdraw = document.getElementById('withdraw-amount');
         const withdrawText = withdraw.innerText;
@@ -53,6 +52,9 @@ document.getElementById('withdraw-btn').addEventListener('click' , function(){
         const newBalance = totalBalance - newWithdrawTotal;
         balanceTotal.innerText = newBalance;
         // clear withdrawinput field 
-        withdrawInput.value = "";   
+        withdrawInput.value = "";
+    }
+    else{
+        alert ('Please Enter Posstive Value');
     }
 })
